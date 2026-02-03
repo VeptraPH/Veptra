@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veptra - Research Peptides</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -42,17 +41,14 @@
 
 <body class="antialiased">
 
-    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <a href="#home" class="flex items-center space-x-2">
-                <!-- Updated with a new SVG logo -->
-              <img src="https://github.com/user-attachments/assets/03fe1e16-de45-4ebc-8915-82e7e14a999a"
+                <img src="https://github.com/user-attachments/assets/03fe1e16-de45-4ebc-8915-82e7e14a999a"
                         alt="Veptra Logo"
                         class="h-10 w-10 rounded-full object-cover shadow-md border border-gray-100">
                 <h1 class="text-2xl font-bold text-gray-800">Veptra</h1>
             </a>
-            <!-- Navigation Links -->
             <nav class="mt-4 md:mt-0 flex items-center space-x-4 sm:space-x-6">
                 <ul class="flex space-x-4 sm:space-x-6">
                     <li><a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a></li>
@@ -65,9 +61,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 py-12">
-        <!-- Home Section -->
         <section id="home" class="hero-bg py-24 text-center rounded-xl shadow-lg mb-12">
             <div class="container mx-auto px-4">
                 <h1 class="text-6xl font-extrabold text-gray-900 mb-4 animate-fade-in-up">Discover Purity. Define Research.</h1>
@@ -78,7 +72,6 @@
             </div>
         </section>
 
-        <!-- What are Peptides? Section -->
         <section id="peptide-description" class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-xl mb-12 shadow-sm">
             <h3 class="text-2xl font-semibold text-gray-800 mb-4">What Are Peptides?</h3>
             <p class="text-gray-700 leading-relaxed">
@@ -86,21 +79,17 @@
             </p>
         </section>
 
-        <!-- Product List Section -->
         <section id="product-list" class="my-12">
             <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-8">Product List</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Product cards will be inserted here by JavaScript -->
-            </div>
+                </div>
         </section>
 
-        <!-- Checkout Section -->
         <section id="checkout" class="my-16">
             <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-8">Your Order</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
                 <div id="cart-summary" class="mb-6 space-y-4">
-                    <!-- Cart items will be rendered here -->
-                </div>
+                    </div>
                 <div id="empty-cart-message" class="text-center text-gray-500 hidden">
                     Your cart is empty. Please add some products to continue.
                 </div>
@@ -136,7 +125,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq-section" class="my-16">
             <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-8">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
@@ -178,23 +166,19 @@
             </div>
         </section>
 
-        <!-- Contact Us Section (UPDATED with WhatsApp) -->
         <section id="contact-us" class="my-16">
             <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-8">Contact Us</h2>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg text-center">
                 <p class="text-gray-700 mb-6 font-semibold text-xl">We are available through:</p>
                 <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
 
-                    <!-- NEW: WhatsApp Link -->
                     <a href="https://wa.me/639761483643" target="_blank" class="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 transition-colors font-semibold group">
-                        <!-- WhatsApp Icon (SVG) -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12.01 2C6.49 2 2 6.49 2 12s4.49 10 10.01 10c5.52 0 10-4.49 10-10S17.53 2 12.01 2zm4.56 14.65c-.09.34-.33.56-.63.56-.27 0-.53-.13-.76-.38l-1.39-.9a7.35 7.35 0 01-1.22.46c-.03 0-.06.01-.09.01a6.68 6.68 0 01-2.91-.79 7.7 7.7 0 01-3.17-3.17c-.12-.22-.22-.45-.3-.68-.13-.42-.19-.87-.19-1.34 0-1.07.41-2.07 1.14-2.82.72-.75 1.67-1.16 2.68-1.16.5 0 .97.16 1.34.46.12.1.2.22.25.35l.08.2.06.15c.03.07.06.13.06.2 0 .15-.05.3-.13.43-.07.12-.19.26-.29.38l-.75.75c-.13.13-.2.32-.2.52 0 .2.08.39.23.53l.3.3c.6.6 1.34 1 2.15 1.15l.3.06c.13.03.26.04.4.04.2 0 .38-.08.52-.23l.75-.75c.13-.13.32-.2.52-.2h.01c.21 0 .4.08.53.23l.18.23c.3.37.52.8.63 1.25.07.3.07.65 0 .93-.09.28-.27.53-.53.76z"/>
                         </svg>
                         <span>WhatsApp (09761483643)</span>
                     </a>
                     
-                    <!-- Email Link (Unchanged) -->
                     <a href="mailto:veptraph@gmail.com" class="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors font-semibold group">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:scale-105 transition-transform" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -205,7 +189,6 @@
             </div>
         </section>
 
-        <!-- Footer with Disclaimer -->
         <footer class="bg-gray-800 text-white py-12 px-4 text-center">
             <div class="container mx-auto max-w-4xl">
                 <h3 class="text-2xl font-bold mb-4 text-red-400">Disclaimer</h3>
@@ -262,6 +245,34 @@
                 image: 'https://placehold.co/400x400/F0F4F8/64748b?text=SEMAX'
             },
             {
+                id: 13,
+                name: 'NAD+ 500mg',
+                price: 2500,
+                description: 'A vital coenzyme researched for its role in cellular energy metabolism, DNA repair, and potential longevity studies.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=NAD+'
+            },
+            {
+                id: 14,
+                name: 'Snap-8 10mg',
+                price: 1000,
+                description: 'An octapeptide studied for its potential to modulate muscle contractions and its application in topical anti-aging research.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=SNAP-8'
+            },
+            {
+                id: 15,
+                name: 'GTT 1500mg',
+                price: 1500,
+                description: 'A research-grade compound utilized in studies focusing on metabolic efficiency and glucose tolerance pathways.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=GTT'
+            },
+            {
+                id: 16,
+                name: '5-amino-1mq 50mg',
+                price: 1500,
+                description: 'A small molecule NNMT inhibitor under investigation for its role in fat metabolism and muscle tissue enhancement.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=5-amino'
+            },
+            {
                 id: 9,
                 name: 'Retatrutide 10mg',
                 price: 2500,
@@ -314,7 +325,6 @@
 
                 productCard.innerHTML = `
                     <div class="w-full flex flex-col items-center flex-grow">
-                        <!-- Image is now static and unclickable -->
                         <img src="${product.image}" alt="${product.name}" class="rounded-lg mb-4 w-48 h-48 object-cover">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">${product.name}</h3>
                         <p class="text-sm text-gray-500 flex-grow mb-4">${product.description}</p>
@@ -456,6 +466,3 @@
 </body>
 
 </html>
-
-
-
