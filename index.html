@@ -207,7 +207,6 @@
     </main>
 
     <script>
-        // Product data is updated to include the new 'Injection Pen Device'
         const products = [
             {
                 id: 7,
@@ -224,11 +223,25 @@
                 image: 'https://placehold.co/400x400/F0F4F8/64748b?text=T30'
             },
             {
+                id: 9,
+                name: 'Retatrutide 10mg',
+                price: 2500,
+                description: 'A triple-agonist peptide (GIP, GLP-1, Glucagon) undergoing research for its potent effects on metabolism and weight loss studies.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=R10'
+            },
+            {
                 id: 3,
                 name: 'GHK-Cu',
                 price: 2000,
                 description: 'A copper peptide complex widely researched for its role in tissue regeneration, skin health, and anti-inflammatory mechanisms.',
                 image: 'https://placehold.co/400x400/F0F4F8/64748b?text=GHK-Cu'
+            },
+            {
+                id: 17,
+                name: 'GHK-cu 1mg cosmetic grade',
+                price: 1300,
+                description: 'A high-purity copper peptide specifically tailored for cosmetic research and topical application studies.',
+                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=GHK-CU+Cosmetic'
             },
             {
                 id: 4,
@@ -273,24 +286,16 @@
                 image: 'https://placehold.co/400x400/F0F4F8/64748b?text=5-amino'
             },
             {
-                id: 9,
-                name: 'Retatrutide 10mg',
-                price: 2500,
-                description: 'A triple-agonist peptide (GIP, GLP-1, Glucagon) undergoing research for its potent effects on metabolism and weight loss studies.',
-                image: 'https://placehold.co/400x400/F0F4F8/64748b?text=R10'
-            },
-            {
                 id: 10,
                 name: 'KPV',
                 price: 1000,
                 description: 'A tripeptide with potent anti-inflammatory and antimicrobial properties, derived from the alpha-MSH hormone.',
                 image: 'https://placehold.co/400x400/F0F4F8/64748b?text=KPV'
             },
-            // --- PRODUCTS (including device/cartridge, now with local image URLs) ---
             {
                 id: 11,
                 name: 'V1 Slim',
-                price: 1000, // Placeholder price
+                price: 1000,
                 description: 'A reusable, auto-injecting pen device for precise and consistent subcutaneous delivery of reconstituted research compounds.<br><br>Features:<br>• Delivers up to 80 units per dose.<br>• Fully enclosed cartridge design.<br>• Smooth and easy operation.<br>• High dosing accuracy.<br>• Durable metal construction.',
                 image: "https://github.com/user-attachments/assets/6642c6b8-027e-437f-9506-f08749efb4ae"
             },
@@ -314,13 +319,11 @@
         const checkoutForm = document.getElementById('checkout-form');
         const submitOrderBtn = document.getElementById('submit-order-btn');
 
-
         // Function to render the product grid
         function renderProducts() {
             productGrid.innerHTML = '';
             products.forEach(product => {
                 const productCard = document.createElement('div');
-                // The entire card is now a simple container, removing the click handler for the modal
                 productCard.className = 'product-card bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center';
 
                 productCard.innerHTML = `
@@ -339,7 +342,6 @@
                     </div>
                 `;
                 
-                // No click handler for modal, simplifying the interaction.
                 productGrid.appendChild(productCard);
             });
             attachAddToCartListeners();
@@ -409,7 +411,6 @@
         function attachRemoveFromCartListeners() {
             document.querySelectorAll('.remove-from-cart-btn').forEach(button => {
                 button.addEventListener('click', (event) => {
-                    // Use closest to ensure the button is the target, even if the SVG or path is clicked
                     const productId = parseInt(event.target.closest('button').dataset.id); 
                     cart = cart.filter(item => item.id !== productId);
                     updateCart();
@@ -422,7 +423,6 @@
             event.preventDefault();
 
             if (cart.length === 0) {
-                // Use a temporary visual message instead of alert()
                 const originalText = submitOrderBtn.textContent;
                 submitOrderBtn.textContent = "Cart is Empty! Add products first.";
                 submitOrderBtn.classList.add('bg-red-500');
@@ -448,11 +448,7 @@
             body += `\n--- Total Order Value ---\nTotal: ₱${orderTotal}\n\nThank you.\n`;
 
             let subject = `New Order from ${clientName} (Total: ₱${orderTotal})`;
-            
-            // Generate the mailto link
             const mailtoLink = `mailto:veptraph@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            // Redirect to the mailto link
             window.location.href = mailtoLink;
         });
 
@@ -466,4 +462,3 @@
 </body>
 
 </html>
-
