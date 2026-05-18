@@ -443,10 +443,11 @@
             const clientName = document.getElementById('client-name').value;
             const clientPhone = document.getElementById('client-phone').value;
             const clientEmail = document.getElementById('client-email').value;
+            const clientAddress = document.getElementById('client-address').value;
             
             const orderTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-            let body = `Hello Veptra,\n\nI would like to place an order based on the details below.\n\n--- Client Details ---\nName: ${clientName}\nPhone: ${clientPhone}\nEmail: ${clientEmail}\n\n--- Order Summary ---\n`;
+            let body = `Hello Veptra,\n\nI would like to place an order based on the details below.\n\n--- Client Details ---\nName: ${clientName}\nPhone: ${clientPhone}\nEmail: ${clientEmail}\nDelivery Address:\n${clientAddress}\n\n--- Order Summary ---\n`;
 
             cart.forEach(item => {
                 body += `- ${item.name} (₱${item.price} each) x ${item.quantity} = ₱${item.price * item.quantity}\n`;
@@ -458,7 +459,7 @@
             const mailtoLink = `mailto:veptraph@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoLink;
         });
-
+        
         // Initialize
         window.onload = () => {
             renderProducts();
